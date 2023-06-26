@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style/main.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<title>Tharivt | Homepage</title>
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+
+	<header>
+		<nav class="main-nav">
+			<div class="brand text-main">
+				<a href="#">
+					<img src="assets/icons/tharivt.jpg" style="height: 40%; width: 40%;">
+				</a>
+			</div>
+			<div class="links">
+				<ul>
+					<li><a href="index.html" >Home</a></li> 
+					<li><a href="categories.html">Collection</a></li>
+				
+					<li><a href="#contact">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="icon-for-user">
+			</div>
+			<div class="menu">
+				<img src="assets/icons/menu.svg" alt="menu">
+			</div>
+		</nav>
+</header>
+<section >
+<div class="flex-box">
+	<div class="left">
+					<h2 class="text-main">OUR COLLECTION</h2>
+				<div class="big-img">
+					<img src="img/p14.jpeg" class="no-click" ">
+				</div>	
+	
+		<!-- Enlarged Image -->
+		<div id="enlargedImg" class="enlarged-img" onclick="closeImage()">
+			<img src="img/p14.jpeg" class="no-click" alt="Enlarged Image">
+		</div>
+	
+		<script>
+			function enlargeImage(img) {
+				var enlargedImg = document.getElementById('enlargedImg');
+				enlargedImg.firstElementChild.src = img.src;
+				enlargedImg.classList.add('active');
+				document.body.style.overflow = 'hidden'; // Prevent scrolling when the image is enlarged
+			}
+	
+			function closeImage() {
+				var enlargedImg = document.getElementById('enlargedImg');
+				enlargedImg.classList.remove('active');
+				document.body.style.overflow = 'auto'; // Restore scrolling when the image is closed
+			}
+		</script> 	
+		<div class="images">
+			<div class="small-img">
+				<img src="img/p14.jpeg" onclick="showImg(this.src)">
+			</div>
+			<div class="small-img">
+				<img src="img/p16.jpeg" onclick="showImg(this.src)">
+			</div>
+			<div class="small-img">
+				<img src="img/p15.jpeg" onclick="showImg(this.src)">
+			</div>
+			<div class="small-img">
+				<img src="img/p17.jpeg" onclick="showImg(this.src)">
+			</div>
+		</div>
+	</div>
+
+	<div class="right">	
+		<div class="pname" style="text-align: center;" >Basic Trousers</div>
+		<div style="font-size: smaller; text-align: center;">Our Thrift Store offers a wide selection of stylish and affordable pants.</div>
+		<div style="font-size: smaller; text-align: center;">These pre-loved pants are a perfect addition to your wardrobe.</div>
+		<div style="font-size: smaller; text-align: center;">With their unique designs and affordable prices,</div>
+		<div style="font-size: smaller; text-align: center;" >you can find the perfect pair of jeans to express your personal style.</div>
+		<div class="price" style="font-weight: bolder;text-align: center;" >Rp 41.000</div>
+		<div class="buy-button"  style="text-align: center;"><button onclick="redirectToURL()">Buy this</button> </div>
+		
+		<script>
+			function redirectToURL() {
+				window.location.href = 'https://wa.link/xmnx44';
+			}
+			</script>
+		</div>
+		
+<script>
+	let bigImg = document.querySelector('.big-img img');
+	function showImg(pic){
+		bigImg.src = pic;
+	}
+</script>
+</section>	
+
+<footer id="contact">
+	<div class="container">
+		<div class="footer-content row mb-4">
+			<div class="footer-brand col-12 col-sm-12 col-md-4 col-lg-4">
+				<div>
+					<h1 class="text-main">THARIVT</h1>
+					<div class="footer-item-content">
+						<a href="https://www.instagram.com/tharivt/" class="ig-icon">
+							<img src="assets/images/instagram.png" alt="ig" class="img-fluid">
+					</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer-item col-12 col-sm-12 col-md-4">
+				<div>
+					<div class="footer-item-content">
+						<h3 class="text-main">Business</h3>
+						<p><a href="#">tharivt@fakemail.com</a></p>
+						<p><a href="#">088899778877</a></p>
+						<p><a href="#">Bekasi, Tambun Selatan</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-item col-12 col-sm-12 col-md-4">
+				<div>
+					<div class="footer-item-content">
+						<h3 class="text-main">Social</h3>
+
+						<p style="font-style: italic; text-align: justify;">“Let’s give used clothes a second chance to
+							shine and reduce our
+							impact on the environment. By embracing pre-loved
+							clothing, we not only reduce waste but also add a unique touch to our personal style. So
+							let’s revive our wardrobe
+							with
+							second-hand finds and make a conscious effort towards a sustainable future.”</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="copyright-section border-top">
+		<div class="row">
+			<div class="col-12">
+				<div class="copyright-content text-center mt-4">
+					<p class="text-second"> Tharivt Copyright &copy; 2020 All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</footer>
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="library/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="script/index.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
+</body>
+
+</html>
